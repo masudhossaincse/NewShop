@@ -10,8 +10,11 @@ class CartController extends Controller
 {
     public function addToCart(Request $request)
     {
-        // return $request->all();
+        return $request->all();
         $product = Product::find($request->id);
+       dd($product);
+        // $product = Product::all();
+        
 
         Cart::add([
             'id' => $request->id,

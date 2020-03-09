@@ -63,8 +63,8 @@ Route::get('/user/manage', 'UserController@manageUser');
 
 /*Cart Info*/ 
 
-Route::get('/cart/add','CartController@addToCart')->name('add-to-cart');
-Route::post('/cart/show','CartController@showCart')->name('show-cart');
+Route::post('/cart/add','CartController@addToCart')->name('add-to-cart');
+// Route::('/cart/show','CartController@showCart')->name('show-cart');
 
 
 
