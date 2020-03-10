@@ -6,7 +6,7 @@
 
 <div class="banner1">
 			<div class="container">
-				<h3><a href="index.html">Home</a> / <span>Single</span></h3>
+				<h3><a href="index.html">Home</a> / <span>Add to Cart</span></h3>
 			</div>
 		</div>
 	<!--banner-->
@@ -43,13 +43,15 @@
 									<div class="description">
 										<p><span>Product Short Description :</span> {{ $product->productShortDescription }}</p>
 									</div>
+
 									<form method="POST" action="{{ route('add-to-cart') }}">
 									@csrf
 										<div class="color-quality">
 											<h6>Quantity :</h6>
 												<div class="quantity"> 
 													<input type="number" name="qty" value="1" min="1" />
-													<input type="hidden" name="qty" value="{{ $product->id }}" />
+													<input type="hidden" name="id" value="{{ $product->id }}" />
+													
 												</div>
 										</div>
 										<div class="women">

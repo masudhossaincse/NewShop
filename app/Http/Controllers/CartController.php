@@ -10,19 +10,32 @@ class CartController extends Controller
 {
     public function addToCart(Request $request)
     {
-        return $request->all();
-        $product = Product::find($request->id);
-       dd($product);
-        // $product = Product::all();
         
-
+        $product = Product::find($request->id);
+       
         Cart::add([
             'id' => $request->id,
             'name' => $product->productName,
             'price' => $product->productPrice,
             'qty' => $request->qty,
+            'options' => [
+            	'image' => '$product->productImage'
+            ]
         ]);
 
-        return redirect('/add-to-cart');
+
+        return redirect('/cart/show');
+    }
+    public function showCart()
+    {
+    	$cartItems = Cart::content();
+    	// return $cartItems;
+    	return view('front-end.cart.show-cart', ['cartItems'=>$cartItems]);
+    }
+
+    public function deleteCart($id)
+    {
+    	Cart::remove($id);
+    	return redirect('/cart/show');
     }
 }

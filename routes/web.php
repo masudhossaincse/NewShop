@@ -64,7 +64,8 @@ Route::get('/user/manage', 'UserController@manageUser');
 /*Cart Info*/ 
 
 Route::post('/cart/add','CartController@addToCart')->name('add-to-cart');
-// Route::('/cart/show','CartController@showCart')->name('show-cart');
+Route::get('/cart/show','CartController@showCart')->name('show-cart');
+Route::get('/cart/delete/{id}','CartController@deleteCart')->name('delete-cart-item');
 
 
 
