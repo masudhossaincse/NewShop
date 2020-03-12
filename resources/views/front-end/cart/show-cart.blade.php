@@ -32,25 +32,57 @@
 						</thead>
 						<tbody>
 							@php($i = 1)
+							@php ($sum = 0)
 							@foreach($cartItems as $cartItem)
 								<tr>
 									<td>{{ $i++ }}</td>
 									
 									<td>{{ $cartItem->name }}</td>
-									<td><img src="{{ asset($cartItem->options->image) }}" alt=""/> </td>
+									<td>
+										<img src="{{ asset($cartItem->options->image) }}" alt="" height="80" width="100"/>
+									</td>
 									<td>{{ $cartItem->price }}</td>
-									<td>{{ $cartItem->qty }}</td>
-									<td>{{ $cartItem->qty*$cartItem->price }}</td>
+									<td>
+										<form action="{{ route('update-cart') }}" method="POST">
+										@csrf
+											<input type="number" name="qty" value="{{ $cartItem->qty }}" min="1">
+											<input type="hidden" name="rowId" value="{{ $cartItem->rowId }}">
+											<input type="submit" name="btn" value="Update">
+										</form>
+									</td>
+									<td>{{ $total = $cartItem->qty*$cartItem->price }}</td>
 									
 									<td>
 										<a href="{{ route('delete-cart-item', ['rowId'=>$cartItem->rowId]) }}" class="btn btn-danger btn-sm">
-											<i class="fa fa-trash" aria-hidden="true"></i>
+											<i class="fa fa-times" aria-hidden="true"></i>
 										</a>
 									</td>
 								</tr>
+								<?php $sum = $sum+$total; ?>
 							@endforeach
 						</tbody>
 					</table>
+					<hr>
+					<table class="table table-bordered">
+						<tr>
+							<th>Total Item Price (Tk. )</th>
+							<td>{{ $sum }}</td>
+						</tr>
+						<tr>
+							<th>Total Vat (Tk. )</th>
+							<td>{{ $vat = 0 }}</td>
+						</tr>
+						<tr>
+							<th>Grand Price (Tk. )</th>
+							<td>{{ $sum+$vat }}</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<a href="{{ route('checkout') }}" class="btn btn-success pull-right">Checkout</a>
+					<a href="" class="btn btn-success">Continue Shopping</a>
 				</div>
 			</div>
 			<!--single-->

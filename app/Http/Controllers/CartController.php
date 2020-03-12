@@ -19,7 +19,7 @@ class CartController extends Controller
             'price' => $product->productPrice,
             'qty' => $request->qty,
             'options' => [
-            	'image' => '$product->productImage'
+            	'image' => $product->productImage
             ]
         ]);
 
@@ -37,5 +37,12 @@ class CartController extends Controller
     {
     	Cart::remove($id);
     	return redirect('/cart/show');
+    }
+    public function updateCart(Request $request)
+    {
+        
+        Cart::update($request->rowId, $request->qty);
+    	return redirect('/cart/show');
+        
     }
 }

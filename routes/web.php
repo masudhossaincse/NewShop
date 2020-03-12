@@ -5,7 +5,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', 'NewShopController@index')->name('home');
+Route::get('/', 'NewShopController@index')->name('/');
 Route::get('/category-product/{id}', 'NewShopController@categoryContent')->name('category-product');
 
 
@@ -66,6 +66,12 @@ Route::get('/user/manage', 'UserController@manageUser');
 Route::post('/cart/add','CartController@addToCart')->name('add-to-cart');
 Route::get('/cart/show','CartController@showCart')->name('show-cart');
 Route::get('/cart/delete/{id}','CartController@deleteCart')->name('delete-cart-item');
+Route::post('/cart/update', 'CartController@updateCart')->name('update-cart');
+Route::get('/checkout', 'CheckoutController@index')->name('checkout');
+
+Route::post('/customer/registration', 'CheckoutController@customerSignUp')->name('customer-sign-up');
+
+
 
 
 
