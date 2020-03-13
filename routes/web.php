@@ -79,6 +79,9 @@ Route::post('/shipping/save', 'CheckoutController@saveShippingInfo')->name('new-
 Route::get('/checkout/payment', 'CheckoutController@paymentForm')->name('checkout-payment');
 
 
+Route::post('/checkout/order', 'CheckoutController@newOrder')->name('new-order');
+
+
 
 
 

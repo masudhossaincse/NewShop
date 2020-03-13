@@ -21,7 +21,7 @@
 	<!--content-->
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2 well">
-				<form action="">
+				<form action="{{ route('new-order') }}" method="POST">
                 @csrf
                     <table class="table table-bordered">
                         <tr>

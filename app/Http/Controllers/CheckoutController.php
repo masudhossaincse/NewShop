@@ -62,4 +62,9 @@ class CheckoutController extends Controller
     {
         return view('front-end.checkout.payment');
     }
+
+    public function newOrder(Request $request)
+    {
+        return $request->all();
+    }
 }
