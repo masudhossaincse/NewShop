@@ -167,6 +167,13 @@ class ProductController extends Controller
         return $imageUrl;
 
     }
+    public function deleteProduct($id)
+    {
+        $product = Product::find($id);
+        $product->delete();
+
+        return redirect('/product/manage')->with('message', 'Successfully deleted product');
+    }
     
 
 
