@@ -101,7 +101,7 @@
                 <br>
                     <div class="card-body">
                         
-                        <form method="POST" action="{{ route('login') }}">
+                        <form method="POST" action="{{ route('customer-login') }}">
                             @csrf
 
                             <div class="form-group row">
@@ -133,7 +133,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-10 ">
-                                    <button type="submit" class="btn btn-success btn-block">
+                                    <button type="submit" name="btn" class="btn btn-success btn-block">
                                         {{ __('Login') }}
                                     </button>
 

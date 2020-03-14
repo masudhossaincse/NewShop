@@ -72,6 +72,7 @@ Route::post('/cart/update', 'CartController@updateCart')->name('update-cart');
 Route::get('/checkout', 'CheckoutController@index')->name('checkout');
 
 Route::post('/customer/registration', 'CheckoutController@customerSignUp')->name('customer-sign-up');
+Route::post('/checkout/login', 'CheckoutController@customerLoginCheck')->name('customer-login');
 
 Route::get('/checkout/shipping', 'CheckoutController@shippingForm')->name('checkout-shipping');
 
@@ -80,6 +81,9 @@ Route::get('/checkout/payment', 'CheckoutController@paymentForm')->name('checkou
 
 
 Route::post('/checkout/order', 'CheckoutController@newOrder')->name('new-order');
+
+
+Route::get('/complete/order', 'CheckoutController@completeOrder')->name('complete-order');
 
 
 

@@ -74,14 +74,23 @@
 						</tr>
 						<tr>
 							<th>Grand Price (Tk. )</th>
-							<td>{{ $sum+$vat }}</td>
+							<td>{{ $orderTotal = $sum+$vat }}</td>
+							<?php
+								Session::put('orderTotal', $orderTotal);
+							?>
 						</tr>
 					</table>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
+					@if(Session::get('customerId') && Session::get('shippingId'))
+						<a href="{{ route('checkout-payment') }}" class="btn btn-success pull-right">Checkout</a>
+					@elseif(Session::get('customerId'))
+					<a href="{{ route('checkout-shipping') }}" class="btn btn-success pull-right">Checkout</a>
+					@else
 					<a href="{{ route('checkout') }}" class="btn btn-success pull-right">Checkout</a>
+					@endif
 					<a href="" class="btn btn-success">Continue Shopping</a>
 				</div>
 			</div>
@@ -96,10 +105,10 @@
 										<figure>		
 											<a href="single.html">
 												<div class="grid-img">
-													<img  src="URL:: asset('/') }}front-end/images/p28.jpg" class="img-responsive" alt="">
+													<img  src="URL::asset('/') }}front-end/images/p28.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="URL:: asset('/') }}front-end/images/p27.jpg" class="img-responsive"  alt="">
+													<img  src="URL::asset('/') }}front-end/images/p27.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	
@@ -127,10 +136,10 @@
 										<figure>		
 											<a href="single.html">
 												<div class="grid-img">
-													<img  src="URL:: asset('/') }}front-end/images/p30.jpg" class="img-responsive" alt="">
+													<img  src="URL::asset('/') }}front-end/images/p30.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="URL:: asset('/') }}front-end/images/p29.jpg" class="img-responsive"  alt="">
+													<img  src="URL::asset('/') }}front-end/images/p29.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	
@@ -155,10 +164,10 @@
 										<figure>		
 											<a href="single.html">
 												<div class="grid-img">
-													<img  src="asset('/') }}front-end/images/s2.jpg" class="img-responsive" alt="">
+													<img  src="URL::asset('/') }}front-end/images/s2.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="asset('/') }}front-end/images/s1.jpg" class="img-responsive"  alt="">
+													<img  src="URL::asset('/') }}front-end/images/s1.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	
@@ -183,10 +192,10 @@
 										<figure>		
 											<a href="single.html">
 												<div class="grid-img">
-													<img  src="URL:: asset('/') }}front-end/images/s4.jpg" class="img-responsive" alt="">
+													<img  src="URL::asset('/') }}front-end/images/s4.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="URL:: asset('/') }}front-end/images/s3.jpg" class="img-responsive"  alt="">
+													<img  src="URL::asset('/') }}front-end/images/s3.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	
