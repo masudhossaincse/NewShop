@@ -33,7 +33,7 @@
                     <a href="{{ route('view-order-invoice', ['id'=>$order->id]) }}" class="btn btn-sm btn-primary" title="Invoice order">
 						Invoice
 					</a>
-                    <a href="{{ url('/category/edit/', ['id'=>$order->id]) }}" class="btn btn-sm btn-info" title="Download order">
+                    <a href="{{ route('download-order-invoice', ['id'=>$order->id]) }}" class="btn btn-sm btn-info" title="Download order">
 						Download
 					</a>
 					<a href="{{ url('/category/edit/', ['id'=>$order->id]) }}" class="btn btn-sm btn-secondary" title="Edit order">

@@ -99,6 +99,9 @@ Route::get('/order/view-order-detail/{id}', 'OrderController@viewOrderDetail')->
 Route::get('/order/view-order-invoice/{id}', 'OrderController@viewOrderInvoice')->name('view-order-invoice');
 
 
+Route::get('/order/download-order-invoice/{id}', 'OrderController@downloadOrderInvoice')->name('download-order-invoice');
+
+
 
 
 

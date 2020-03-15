@@ -9,6 +9,9 @@ use App\Customer;
 use App\Payment;
 use App\Shipping;
 use App\OrderDetail;
+use PDF;
+
+
 class OrderController extends Controller
 {
     public function manageOrder()
@@ -57,5 +60,27 @@ class OrderController extends Controller
             'shipping' =>$shipping,
             'orderDetails' =>$orderDetails
         ]);
+    }
+
+    public function downloadOrderInvoice($id)
+    {
+        $order = Order::find($id);
+        $customer = Customer::find($order->customer_id);
+        $shipping = Shipping::find($order->shipping_id);
+        // $payment = Payment::where('order_id', $order->id)->first();
+        
+        $orderDetails = OrderDetail::where('order_id', $order->id)->get();
+       
+
+        $pdf = PDF::loadView('admin.order.download-invoice',[
+            'order' => $order,
+            'customer' =>$customer,
+            'shipping' =>$shipping,
+            'orderDetails' =>$orderDetails
+        ]);
+
+
+
+        return $pdf->stream('hdtuto.pdf');
     }
 }
