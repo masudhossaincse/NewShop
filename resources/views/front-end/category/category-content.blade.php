@@ -121,13 +121,13 @@
 									});//]]>  
 
 									</script>
-									<script type="text/javascript" src="{{ asset('/') }}/front-end/js/jquery-ui.js"></script>
+									<script type="text/javascript" src="{{ asset('/') }}front-end/js/jquery-ui.js"></script>
 								</div>
 								<div class="top-rates">
 									<h3>Top Rates products</h3>
 									<div class="recent-grids">
 										<div class="recent-left">
-											<a href="single.html"><img class="img-responsive " src="{{ asset('/') }}/front-end/images/r.jpg" alt=""></a>	
+											<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r.jpg" alt=""></a>	
 										</div>
 										<div class="recent-right">
 											<h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
@@ -137,7 +137,7 @@
 									</div>
 									<div class="recent-grids">
 										<div class="recent-left">
-											<a href="single.html"><img class="img-responsive " src="{{ asset('/') }}/front-end/images/r1.jpg" alt=""></a>	
+											<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r1.jpg" alt=""></a>	
 										</div>
 										<div class="recent-right">
 											<h6 class="best2"><a href="single.html">Duis aute irure </a></h6>
@@ -147,7 +147,7 @@
 									</div>
 									<div class="recent-grids">
 										<div class="recent-left">
-											<a href="single.html"><img class="img-responsive " src="{{ asset('/') }}/front-end/images/r2.jpg" alt=""></a>	
+											<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r2.jpg" alt=""></a>	
 										</div>
 										<div class="recent-right">
 											<h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
@@ -157,7 +157,7 @@
 									</div>
 									<div class="recent-grids">
 										<div class="recent-left">
-											<a href="single.html"><img class="img-responsive " src="{{ asset('/') }}/front-end/images/r3.jpg" alt=""></a>	
+											<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r3.jpg" alt=""></a>	
 										</div>
 										<div class="recent-right">
 											<h6 class="best2"><a href="single.html">Ut enim ad minim </a></h6>
@@ -181,16 +181,16 @@
 									</ul>
 								</div>
 								<div class="cat-img">
-									<img class="img-responsive " src="{{ asset('/') }}/front-end/images/45.jpg" alt="">
+									<img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/45.jpg" alt="">
 								</div>
 							</div>
 							<div class="col-md-9 product-agileinfon-grid1 w3l">
 								<div class="product-agileinfon-top">
 									<div class="col-md-6 product-agileinfon-top-left">
-										<img class="img-responsive " src="{{ asset('/') }}/front-end/images/img1.jpg" alt="">
+										<img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/img1.jpg" alt="">
 									</div>
 									<div class="col-md-6 product-agileinfon-top-left">
-										<img class="img-responsive " src="{{ asset('/') }}/front-end/images/img2.jpg" alt="">
+										<img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/img2.jpg" alt="">
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -230,7 +230,7 @@
 													<div class="grid-arr">
 														<div  class="grid-arrival">
 															<figure>		
-																<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
+																<a href="{{ url('product-details') }}" class="new-gri"> 
 																	<div class="grid-img">
 																		<img  src="{{ asset($publishedCategoryProduct->productImage) }}" class="img-responsive" alt="">
 																	</div>

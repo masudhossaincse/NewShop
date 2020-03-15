@@ -56,13 +56,9 @@
                                 <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                    <input id="password" type="password" class="form-control" name="password" >
 
-                                    @if ($errors->has('password'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('password') }}</strong>
-                                        </span>
-                                    @endif
+                                  
                                 </div>
                             </div>
 
@@ -99,6 +95,7 @@
                 <div class="col-md-5">
                 <h3>Already Registered? Login Here!!</h3>
                 <br>
+                <h4 class="text text-center text-danger">{{ Session::get('message') }}</h4><br><br>
                     <div class="card-body">
                         
                         <form method="POST" action="{{ route('customer-login') }}">
@@ -108,7 +105,7 @@
                                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                    <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                     @if ($errors->has('email'))
                                         <span class="invalid-feedback" role="alert">
@@ -122,13 +119,16 @@
                                 <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                    <input type="password" class="form-control" name="password">
 
-                                    @if ($errors->has('password'))
+                                    <!-- @if ($errors->has('password'))
+
+                                    {{ $errors->has('password') ? ' is-invalid' : '' }}
+                                    
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('password') }}</strong>
                                         </span>
-                                    @endif
+                                    @endif -->
                                 </div>
                             </div>
                             <div class="form-group row">

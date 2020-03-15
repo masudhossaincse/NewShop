@@ -45,7 +45,7 @@
                         <tr>
                             <th></th>
                             <td>
-                                <input type="submit" name="btn" value="Confirm Order" class="btn btn-success">
+                                <input type="submit" value="Confirm Order" class="btn btn-success">
                             </td>
                         </tr>
                     </table>

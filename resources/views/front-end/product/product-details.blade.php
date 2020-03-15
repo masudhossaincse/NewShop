@@ -74,7 +74,7 @@
 							<h3>Recent Products</h3>
 							<div class="recent-grids">
 								<div class="recent-left">
-									<a href="single.html"><img class="img-responsive " src="URL:: asset('/') }}front-end/images/r.jpg" alt=""></a>	
+									<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r.jpg" alt=""></a>	
 								</div>
 								<div class="recent-right">
 									<h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
@@ -87,7 +87,7 @@
 							</div>
 							<div class="recent-grids">
 								<div class="recent-left">
-									<a href="single.html"><img class="img-responsive " src="URL:: asset('/') }}front-end/images/r1.jpg" alt=""></a>	
+									<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r1.jpg" alt=""></a>	
 								</div>
 								<div class="recent-right">
 									<h6 class="best2"><a href="single.html">Duis aute irure </a></h6>
@@ -100,7 +100,7 @@
 							</div>
 							<div class="recent-grids">
 								<div class="recent-left">
-									<a href="single.html"><img class="img-responsive " src="URL:: asset('/') }}front-end/images/r2.jpg" alt=""></a>	
+									<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r2.jpg" alt=""></a>	
 								</div>
 								<div class="recent-right">
 									<h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
@@ -113,7 +113,7 @@
 							</div>
 							<div class="recent-grids">
 								<div class="recent-left">
-									<a href="single.html"><img class="img-responsive " src="URL:: asset('/') }}front-end/images/r3.jpg" alt=""></a>	
+									<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r3.jpg" alt=""></a>	
 								</div>
 								<div class="recent-right">
 									<h6 class="best2"><a href="single.html">Ut enim ad minim </a></h6>
@@ -136,7 +136,7 @@
 										<div class="item">
 											<div class="recent-grids">
 												<div class="recent-left">
-													<a href="single.html"><img class="img-responsive " src="URL:: asset('/') }}front-end/images/r.jpg" alt=""></a>	
+													<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r.jpg" alt=""></a>	
 												</div>
 												<div class="recent-right">
 													<h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
@@ -149,7 +149,7 @@
 											</div>
 											<div class="recent-grids">
 												<div class="recent-left">
-													<a href="single.html"><img class="img-responsive " src="URL:: asset('/') }}front-end/images/r1.jpg" alt=""></a>	
+													<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r1.jpg" alt=""></a>	
 												</div>
 												<div class="recent-right">
 													<h6 class="best2"><a href="single.html">Duis aute irure </a></h6>
@@ -162,7 +162,7 @@
 											</div>
 											<div class="recent-grids">
 												<div class="recent-left">
-													<a href="single.html"><img class="img-responsive " src="URL:: asset('/') }}front-end/images/r2.jpg" alt=""></a>	
+													<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r2.jpg" alt=""></a>	
 												</div>
 												<div class="recent-right">
 													<h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
@@ -175,7 +175,7 @@
 											</div>
 											<div class="recent-grids">
 												<div class="recent-left">
-													<a href="single.html"><img class="img-responsive " src="URL:: asset('/') }}front-end/images/r3.jpg" alt=""></a>	
+													<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r3.jpg" alt=""></a>	
 												</div>
 												<div class="recent-right">
 													<h6 class="best2"><a href="single.html">Ut enim ad minim </a></h6>
@@ -190,7 +190,7 @@
 										<div class="item">
 											<div class="recent-grids">
 												<div class="recent-left">
-													<a href="single.html"><img class="img-responsive " src="URL:: asset('/') }}front-end/images/r4.jpg" alt=""></a>	
+													<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r4.jpg" alt=""></a>	
 												</div>
 												<div class="recent-right">
 													<h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
@@ -203,7 +203,7 @@
 											</div>
 											<div class="recent-grids">
 												<div class="recent-left">
-													<a href="single.html"><img class="img-responsive " src="URL:: asset('/') }}front-end/images/r5.jpg" alt=""></a>	
+													<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r5.jpg" alt=""></a>	
 												</div>
 												<div class="recent-right">
 													<h6 class="best2"><a href="single.html">Duis aute irure </a></h6>
@@ -216,7 +216,7 @@
 											</div>
 											<div class="recent-grids">
 												<div class="recent-left">
-													<a href="single.html"><img class="img-responsive " src="URL:: asset('/') }}front-end/images/r2.jpg" alt=""></a>	
+													<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r2.jpg" alt=""></a>	
 												</div>
 												<div class="recent-right">
 													<h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
@@ -229,7 +229,7 @@
 											</div>
 											<div class="recent-grids">
 												<div class="recent-left">
-													<a href="single.html"><img class="img-responsive " src="URL:: asset('/') }}front-end/images/r3.jpg" alt=""></a>	
+													<a href="single.html"><img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/r3.jpg" alt=""></a>	
 												</div>
 												<div class="recent-right">
 													<h6 class="best2"><a href="single.html">Ut enim ad minim </a></h6>
@@ -242,7 +242,7 @@
 											</div>
 										</div>
 									</div>
-									<img class="img-responsive " src="URL:: asset('/') }}front-end/images/woo2.jpg" alt="">
+									<img class="img-responsive " src="{{ URL::asset('/') }}front-end/images/woo2.jpg" alt="">
 								</div>
 								<div class="col-md-8 product-grid1">
 									<div class="tab-wl3">
@@ -278,7 +278,7 @@
 													<div class="descr">
 														<div class="reviews-top">
 															<div class="reviews-left">
-																<img src="URL:: asset('/') }}front-end/images/men3.jpg" alt=" " class="img-responsive">
+																<img src="{{ URL::asset('/') }}front-end/images/men3.jpg" alt=" " class="img-responsive">
 															</div>
 															<div class="reviews-right">
 																<ul>
@@ -339,10 +339,10 @@
 										<figure>		
 											<a href="single.html">
 												<div class="grid-img">
-													<img  src="URL:: asset('/') }}front-end/images/p28.jpg" class="img-responsive" alt="">
+													<img  src="{{ URL::asset('/') }}front-end/images/p28.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="URL:: asset('/') }}front-end/images/p27.jpg" class="img-responsive"  alt="">
+													<img  src="{{ URL::asset('/') }}front-end/images/p27.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	
@@ -370,10 +370,10 @@
 										<figure>		
 											<a href="single.html">
 												<div class="grid-img">
-													<img  src="URL:: asset('/') }}front-end/images/p30.jpg" class="img-responsive" alt="">
+													<img  src="{{ URL::asset('/') }}front-end/images/p30.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="URL:: asset('/') }}front-end/images/p29.jpg" class="img-responsive"  alt="">
+													<img  src="{{ URL::asset('/') }}front-end/images/p29.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	
@@ -398,10 +398,10 @@
 										<figure>		
 											<a href="single.html">
 												<div class="grid-img">
-													<img  src="asset('/') }}front-end/images/s2.jpg" class="img-responsive" alt="">
+													<img  src="{{ URL::asset('/') }}front-end/images/s2.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="asset('/') }}front-end/images/s1.jpg" class="img-responsive"  alt="">
+													<img  src="{{ URL::asset('/') }}front-end/images/s1.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	
@@ -426,10 +426,10 @@
 										<figure>		
 											<a href="single.html">
 												<div class="grid-img">
-													<img  src="URL:: asset('/') }}front-end/images/s4.jpg" class="img-responsive" alt="">
+													<img  src="{{ URL::asset('/') }}front-end/images/s4.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="URL:: asset('/') }}front-end/images/s3.jpg" class="img-responsive"  alt="">
+													<img  src="{{ URL::asset('/') }}front-end/images/s3.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	

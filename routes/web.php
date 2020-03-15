@@ -72,7 +72,14 @@ Route::post('/cart/update', 'CartController@updateCart')->name('update-cart');
 Route::get('/checkout', 'CheckoutController@index')->name('checkout');
 
 Route::post('/customer/registration', 'CheckoutController@customerSignUp')->name('customer-sign-up');
-Route::post('/checkout/login', 'CheckoutController@customerLoginCheck')->name('customer-login');
+Route::post('/checkout/customer-login', 'CheckoutController@customerLoginCheck')->name('customer-login');
+
+
+
+Route::post('/checkout/customer-logout', 'CheckoutController@customerLogout')->name('customer-logout');
+Route::get('/checkout/new-customer-login', 'CheckoutController@newCustomerLogin')->name('new-customer-login');
+
+
 
 Route::get('/checkout/shipping', 'CheckoutController@shippingForm')->name('checkout-shipping');
 
@@ -84,6 +91,13 @@ Route::post('/checkout/order', 'CheckoutController@newOrder')->name('new-order')
 
 
 Route::get('/complete/order', 'CheckoutController@completeOrder')->name('complete-order');
+
+
+/* Manage Order*/
+Route::get('/order/manage-order', 'OrderController@manageOrder')->name('manage-order');
+Route::get('/order/view-order-detail/{id}', 'OrderController@viewOrderDetail')->name('view-order-detail');
+Route::get('/order/view-order-invoice/{id}', 'OrderController@viewOrderInvoice')->name('view-order-invoice');
+
 
 
 

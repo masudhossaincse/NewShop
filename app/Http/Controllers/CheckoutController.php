@@ -20,6 +20,10 @@ class CheckoutController extends Controller
     }
     public function customerSignUp(Request $request)
     {
+        $this->validate($request,[
+            'email' => 'unique:customers,email'
+        ]);
+
         $customer = new Customer();
         $customer->name = $request->name;
         $customer->email = $request->email;
@@ -47,12 +51,30 @@ class CheckoutController extends Controller
     public function customerLoginCheck(Request $request)
     {
         $customer = Customer::where('email', $request->email)->first();
+        // return $customer;
         
         if (password_verify($request->password, $customer->password)) {
-            echo 'Password is valid!';
+            Session::put('customerId', $customer->id);
+            Session::put('customerName', $customer->name);
+
+            return redirect('/checkout/shipping');
+
         } else {
-            echo 'Invalid password.';
+            return redirect('/checkout')->with('message', 'Invalid Password');
         }
+    }
+
+    public function customerLogout()
+    {
+        Session::forget('customerId');
+        Session::forget('customerName');
+        
+        return redirect('/');
+    }
+
+    public function newCustomerLogin()
+    {
+        return view('front-end.customer.customer-login');
     }
 
 
@@ -81,7 +103,9 @@ class CheckoutController extends Controller
 
     public function newOrder(Request $request)
     {
+        
         $paymentType = $request->payment_type;
+        
         if($paymentType == 'Cash') {
             $order = new Order();
             $order->customer_id = Session::get('customerId');
@@ -96,6 +120,7 @@ class CheckoutController extends Controller
 
 
             $cartProducts = Cart::content();
+            
             foreach ($cartProducts as $cartProduct) {
                 $orderDetail = new OrderDetail();
                 $orderDetail->order_id = $order->id;
@@ -105,10 +130,9 @@ class CheckoutController extends Controller
                 $orderDetail->product_quantity = $cartProduct->qty;
                 $orderDetail->save();
 
-                Cart::destroy();
-
-                return redirect('/complete/order');
             }
+            Cart::destroy();
+            return redirect('/complete/order');
 
         } elseif($paymentType == 'Paypal') {
 
