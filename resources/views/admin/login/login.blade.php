@@ -40,8 +40,7 @@
                     <h1 class="h4 text-gray-900 mb-4">Please Sign In</h1>
                   </div>
                   
-                  <form method="POST" action="{{ route('login') }}">
-                        @csrf
+                  {!! Form::open(['route' => 'login', 'method'=>'POST']) !!}
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
@@ -96,7 +95,7 @@
                                 @endif
                             </div>
                         </div>
-                    </form>
+                    {!! Form::close() !!}
 
 
                   <hr>

@@ -123,7 +123,7 @@
 										<div class="starbox small ghosting"> </div>
 									</div>
 									<div class="women">
-										<h6><a href="single.html">{{ $publishedProduct->productName }}</a></h6>
+										<h6><a href="{{ route('product-details', ['id'=>$publishedProduct->id,'name'=>$publishedProduct->productName]) }}">{{ $publishedProduct->productName }}</a></h6>
 										
 										<p >TK. {{ $publishedProduct->productPrice }}</em></p>
 										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>

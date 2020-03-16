@@ -16,12 +16,16 @@ class AuthenticateMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::check()) {
-            return $next($request);
-        }
-        else {
-            return redirect('/login');
-        }
-        
+
+        if(Auth::check()) 
+            {
+
+                return $next($request);
+
+            }
+        else 
+            {
+                return redirect('/login');
+            }
     }
 }

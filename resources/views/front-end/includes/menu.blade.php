@@ -5,7 +5,7 @@
 
 		@foreach ($publishedCategories as $publishedCategory)
 		<li class="dropdown">
-			<a href="{{ url('/category-product/'.$publishedCategory->id) }}" class="dropdown-toggle" data-toggle="dropdown">{{ $publishedCategory->categoryName }}</a>
+			<a href="{{ route('category-product',['id'=>$publishedCategory->id]) }}">{{ $publishedCategory->categoryName }}</a>
 			
 		</li>
 		@endforeach
